@@ -14,28 +14,19 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-// 
+// 导入NativeModules中定义的CalendarManager模块
 var CalendarManager = NativeModules.CalendarManager;
 export default class rnAddNative extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
         <TouchableOpacity
           onPress={ () => {
-            CalendarManager.addEvent('Birthday Party', '4 Privet Drive, Surrey')
+            // log 打印出NSlog中的内容
+            CalendarManager.addEvent('生日派对', '千叶县松户市牧之原')
           }}
         >
-          <Text>123321</Text>
+          <Text>touch use native modules</Text>
         </TouchableOpacity>  
       </View>
     );
