@@ -23,10 +23,18 @@ export default class rnAddNative extends Component {
         <TouchableOpacity
           onPress={ () => {
             // log 打印出NSlog中的内容（addEvent：暴露出去的native modules）
-            CalendarManager.addEvent('拉面大派对', '千叶县松户市牧之原')
+            CalendarManager.addEvent('拉面大派对', '松户')
           }}
         >
           <Text>touch use native modules</Text>
+        </TouchableOpacity>  
+        <TouchableOpacity
+          onPress={ () => {
+            // log 打印出NSlog中的内容（addEvent：暴露出去的native modules）
+            CalendarManager.addEventMoreDate('🎃狂欢', '涩谷',1509379200)
+          }}
+        >
+          <Text>touch use native modules2</Text>
         </TouchableOpacity>  
       </View>
     );
